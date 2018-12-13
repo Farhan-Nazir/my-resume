@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Resume from './Resume';
+import { Link } from 'react-router-dom';
+import './style.css';
+
 
 class MainScreen extends Component {
     render() {
         return (
             <div>
                 Farhan Nazir
-                <Resume />
+                <Link to="/resume">Resume</Link>
+                
             </div>
         );
     }
