@@ -8,6 +8,7 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
+
 const styles = {
   list: {
     width: 250
@@ -37,8 +38,9 @@ class SideNavs extends React.Component {
       <div className={classes.list}>
         <List>
           {NavItems.map(navItem => (
-            <ListItem button={true} key={navItem.id}>
-              <ListItemText primary={navItem.name} onClick={e => e.link} />
+            <ListItem button={true} key={navItem.id} component={this.props.Component} to={navItem.link}>
+              <ListItemText primary={navItem.name} >
+              </ListItemText>
             </ListItem>
           ))}
         </List>

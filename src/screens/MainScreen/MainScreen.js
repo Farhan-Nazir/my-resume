@@ -4,36 +4,11 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import Avatar from "../../components/Avatar/Avatar";
 import Bilal from "../../static/images/bilal.jpg";
-import SideNavs from "../../components/Menu/SideNavs";
 
 class MainScreen extends Component {
-  state = {
-    navItems: [
-      {
-        id: 1,
-        name: "My Resume",
-        link: <Link to="/resume" />
-      },
-      {
-        id: 2,
-        name: "Education",
-        link: <Link to="/education" />
-      }
-    ]
-  };
-
-  /* ,
-      "Education",
-      "Projects",
-      "Skills",
-      "My Network",
-      "My Interests" */
-  navLink = () => console.log("Mainscreen clicking !!!");
-
   render() {
     return (
       <div className="container">
-        <SideNavs NavItems={this.state.navItems} ButtonName={"Menu"} />
         <div className="avatar">
           <Avatar Class="avatarName" Title={"Bilal Nazir"} Src={Bilal} />
         </div>

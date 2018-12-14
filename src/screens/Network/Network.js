@@ -4,7 +4,7 @@ class Network extends Component {
     render() {
         return (
             <div>
-                Network
+                My Network
             </div>
         );
     }
