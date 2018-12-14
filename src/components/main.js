@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
+//Pages
 import MainScreen from "../screens/MainScreen/MainScreen";
 import Resume from "../screens/Resume/Resume";
 import Projects from "../screens/Projects/Projects";
