@@ -1,22 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Drawer from "@material-ui/core/Drawer";
+import Button from "@material-ui/core/Button";
+import List from "@material-ui/core/List";
+import Divider from "@material-ui/core/Divider";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 
 const styles = {
   list: {
-    width: 250,
+    width: 250
   },
   fullList: {
-    width: 'auto',
-  },
+    width: "auto"
+  }
 };
 
 class SideNavs extends React.Component {
@@ -24,12 +22,12 @@ class SideNavs extends React.Component {
     top: false,
     left: false,
     bottom: false,
-    right: false,
+    right: false
   };
 
   toggleDrawer = (side, open) => () => {
     this.setState({
-      [side]: open,
+      [side]: open
     });
   };
 
@@ -39,48 +37,44 @@ class SideNavs extends React.Component {
     const sideList = (
       <div className={classes.list}>
         <List>
-          {['My Resume', 'Education', 'Projects', 'Skills', 'My Network', "My Interests"].map((text, index) => (
-            <ListItem button key={text}>
-              
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-            
-              <ListItemText primary={text} />
+          {this.props.NavItems.map(navItem => (
+            <ListItem button key={navItem}>
+              <ListItemText primary={navItem} />
             </ListItem>
           ))}
         </List>
       </div>
     );
 
-   
     return (
       <div>
-        <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
-       
-        <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
+        <Button
+          onClick={this.toggleDrawer("left", true)}
+          style={{ color: "white" }}
+        >
+          {this.props.ButtonName}
+        </Button>
+
+        <Drawer
+          open={this.state.left}
+          onClose={this.toggleDrawer("left", false)}
+        >
           <div
             tabIndex={0}
             role="button"
-            onClick={this.toggleDrawer('left', false)}
-            onKeyDown={this.toggleDrawer('left', false)}
+            onClick={this.toggleDrawer("left", false)}
+            onKeyDown={this.toggleDrawer("left", false)}
           >
             {sideList}
           </div>
         </Drawer>
-        
       </div>
     );
   }
 }
 
 SideNavs.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(SideNavs);

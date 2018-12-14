@@ -4,22 +4,28 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import Avatar from "../../components/Avatar/Avatar";
 import Bilal from "../../static/images/bilal.jpg";
-import SideNavs from '../../components/Menu/SideNavs'
+import SideNavs from "../../components/Menu/SideNavs";
 
 class MainScreen extends Component {
+  state = {
+    navItems: [
+      "My Resume",
+      "Education",
+      "Projects",
+      "Skills",
+      "My Network",
+      "My Interests"
+    ]
+  };
   render() {
     return (
       <div className="container">
-    <SideNavs />
+        <SideNavs NavItems={this.state.navItems} ButtonName={"Menu"} />
         <div className="avatar">
-          <Avatar
-            Class="avatarName"
-            Title={"Full-Stack Web Developer"}
-            Src={Bilal}
-          />
+          <Avatar Class="avatarName" Title={"Bilal Nazir"} Src={Bilal} />
         </div>
         <div className="menu">
-        <Link to="/resume">Resume</Link>
+          <Link to="/resume">Resume</Link>
         </div>
       </div>
     );
