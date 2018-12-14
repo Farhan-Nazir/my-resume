@@ -9,14 +9,27 @@ import SideNavs from "../../components/Menu/SideNavs";
 class MainScreen extends Component {
   state = {
     navItems: [
-      "My Resume",
+      {
+        id: 1,
+        name: "My Resume",
+        link: <Link to="/resume" />
+      },
+      {
+        id: 2,
+        name: "Education",
+        link: <Link to="/education" />
+      }
+    ]
+  };
+
+  /* ,
       "Education",
       "Projects",
       "Skills",
       "My Network",
-      "My Interests"
-    ]
-  };
+      "My Interests" */
+  navLink = () => console.log("Mainscreen clicking !!!");
+
   render() {
     return (
       <div className="container">

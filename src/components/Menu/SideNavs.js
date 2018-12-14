@@ -24,7 +24,6 @@ class SideNavs extends React.Component {
     bottom: false,
     right: false
   };
-
   toggleDrawer = (side, open) => () => {
     this.setState({
       [side]: open
@@ -32,14 +31,14 @@ class SideNavs extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, NavItems } = this.props;
 
     const sideList = (
       <div className={classes.list}>
         <List>
-          {this.props.NavItems.map(navItem => (
-            <ListItem button key={navItem}>
-              <ListItemText primary={navItem} />
+          {NavItems.map(navItem => (
+            <ListItem button={true} key={navItem.id}>
+              <ListItemText primary={navItem.name} onClick={e => e.link} />
             </ListItem>
           ))}
         </List>
@@ -50,7 +49,10 @@ class SideNavs extends React.Component {
       <div>
         <Button
           onClick={this.toggleDrawer("left", true)}
-          style={{ color: "white" }}
+          style={{
+            color: "white",
+            background: "linear-gradient(to right, #2193b0, #6dd5ed)"
+          }}
         >
           {this.props.ButtonName}
         </Button>
