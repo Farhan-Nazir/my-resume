@@ -1,19 +1,29 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Typography } from "@material-ui/core";
 import "./style.css";
 import Avatar from "../../components/Avatar/Avatar";
-import Bilal from "../../static/images/bilal.jpg";
+import Miss from "../../static/images/missExample.jpg";
+import Icons from "../../components/NetworkIcons/NetworkIcons";
+
+
 
 class MainScreen extends Component {
+  componentWillMount() {
+    this.MainText = "Emma Jones";
+  }
   render() {
     return (
       <div className="container">
         <div className="avatar">
-          <Avatar Class="avatarName" Title={"Bilal Nazir"} Src={Bilal} />
-        </div>
-        <div className="menu">
-          <Link to="/resume">Resume</Link>
+          <Avatar Class="avatarName" Src={Miss} />
+          <Typography variant="h3" gutterBottom align="center">
+            {this.MainText}
+          </Typography>
+          <Typography variant="h6" gutterBottom align="center">
+            I'm Full-Stack Web Developer <br />
+            <Icons />
+          </Typography>
         </div>
       </div>
     );

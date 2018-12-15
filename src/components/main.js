@@ -54,6 +54,14 @@ class Main extends Component {
   render() {
     return (
       <div>
+        <div className="menu_btn">
+        <SideNavs
+          NavItems={this.state.navItems}
+          ButtonName={"My Resume"}
+          Component={Link}
+        />
+        </div>
+        
         <Switch>
           <Route exact path="/" component={MainScreen} />
           <Route path="/resume" component={Resume} />
@@ -63,11 +71,7 @@ class Main extends Component {
           <Route path="/education" component={Education} />
           <Route path="/network" component={Network} />
         </Switch>
-        <SideNavs
-          NavItems={this.state.navItems}
-          ButtonName={"Menu"}
-          Component={Link}
-        />
+        
       </div>
     );
   }

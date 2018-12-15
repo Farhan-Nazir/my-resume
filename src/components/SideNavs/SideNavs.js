@@ -53,7 +53,8 @@ class SideNavs extends React.Component {
           onClick={this.toggleDrawer("left", true)}
           style={{
             color: "white",
-            background: "linear-gradient(to right, #2193b0, #6dd5ed)"
+            background: "linear-gradient(to right, #2193b0, #6dd5ed)",
+            
           }}
         >
           {this.props.ButtonName}
