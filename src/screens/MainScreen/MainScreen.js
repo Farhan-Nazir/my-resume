@@ -7,9 +7,6 @@ import Miss from "../../static/images/missExample.jpg";
 import Icons from "../../components/NetworkIcons/NetworkIcons";
 
 const styles = {
-  avatar: {
-    margin: 160
-  },
   bigAvatar: {
     margin: 10,
     width: 260,
@@ -25,7 +22,15 @@ class MainScreen extends Component {
     return (
       <div className="container">
         <div className="avatar">
-          <Avatar Class="avatarName" Src={Miss} AvatarClass={styles.bigAvatar} />
+          <Avatar
+            /* the className prop does not work, apply, or affect the Avatar componenet
+              Therefore, we can remove it.
+             * You can test it by changing the .avatarName in the CSS
+            */
+            className="avatarName"
+            Src={Miss}
+            AvatarClass={styles.bigAvatar}
+          />
           <Typography variant="h3" gutterBottom align="center">
             {this.MainText}
           </Typography>
@@ -33,7 +38,6 @@ class MainScreen extends Component {
             I'm Full-Stack Web Developer <br />
             <Icons />
           </Typography>
-          
         </div>
       </div>
     );

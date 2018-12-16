@@ -31,4 +31,11 @@ color: azure;
 .avatarName {
   font-size: 3em;
   text-align: center;
+ 
+}
+
+.bigAvatar{
+  margin: 10;
+  width: 260px;
+  height: 260px;
 }
