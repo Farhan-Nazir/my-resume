@@ -6,7 +6,16 @@ import Avatar from "../../components/Avatar/Avatar";
 import Miss from "../../static/images/missExample.jpg";
 import Icons from "../../components/NetworkIcons/NetworkIcons";
 
-
+const styles = {
+  avatar: {
+    margin: 160
+  },
+  bigAvatar: {
+    margin: 10,
+    width: 260,
+    height: 260
+  }
+};
 
 class MainScreen extends Component {
   componentWillMount() {
@@ -16,7 +25,7 @@ class MainScreen extends Component {
     return (
       <div className="container">
         <div className="avatar">
-          <Avatar Class="avatarName" Src={Miss} />
+          <Avatar Class="avatarName" Src={Miss} AvatarClass={styles.bigAvatar} />
           <Typography variant="h3" gutterBottom align="center">
             {this.MainText}
           </Typography>
@@ -24,6 +33,7 @@ class MainScreen extends Component {
             I'm Full-Stack Web Developer <br />
             <Icons />
           </Typography>
+          
         </div>
       </div>
     );

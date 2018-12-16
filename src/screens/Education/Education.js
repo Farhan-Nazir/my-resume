@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import ImageAvatars from "../../components/Avatar/Avatar";
+import Miss from "../../static/images/missExample.jpg";
+
+const styles = {
+    avatar: {
+      margin: 10,
+   
+    }
+}
 
 class Education extends Component {
-    render() {
-        return (
-            <div>
-                My Education
-            </div>
-        );
-    }
+  render() {
+    return <div>My Education
+        <ImageAvatars  Src={Miss} AvatarClass={styles.avatar}/>
+    </div>;
+  }
 }
 
 export default Education;
