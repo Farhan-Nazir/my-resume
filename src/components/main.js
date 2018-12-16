@@ -52,6 +52,7 @@ class Main extends Component {
     ]
   };
   render() {
+    console.log('Test Slack');
     return (
       <div>
         <div className="menu_btn">
