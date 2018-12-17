@@ -15,6 +15,7 @@ import ImageAvatars from "./ImageAvatars/ImageAvatars";
 import Miss from "../static/images/missExample.jpg";
 import { Typography } from "@material-ui/core";
 
+
 withRouter(props => <Main {...props} />);
 const styles = {
   bigAvatar: {
@@ -92,11 +93,7 @@ class Main extends Component {
       <div>
         {this.handleAvatar()}
         <div className="menu_btn">
-          <SideNavs
-            NavItems={this.state.navItems}
-            ButtonName={"My Resume"}
-            Component={Link}
-          />
+          <SideNavs NavItems={this.state.navItems} Component={Link} />
         </div>
 
         <Switch>
