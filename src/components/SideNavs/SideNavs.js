@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles, withTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import { IoIosMenu } from "react-icons/io";
 
 const styles = {
   list: {
@@ -51,15 +52,10 @@ class SideNavs extends React.Component {
 
     return (
       <div>
-        <Button
+        <IoIosMenu
           onClick={this.toggleDrawer("left", true)}
-          style={{
-            color: "white",
-            background: "linear-gradient(to right, #2193b0, #6dd5ed)"
-          }}
-        >
-          {this.props.ButtonName}
-        </Button>
+          style={{ width: 40, height: 40, color: "white", cursor: "pointer" }}
+        />
 
         <Drawer
           open={this.state.left}

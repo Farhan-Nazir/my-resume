@@ -16,6 +16,7 @@ import ImageAvatars from "./ImageAvatars/ImageAvatars";
 import ProfileImage from "../static/images/profile.jpg";
 import Data from "../static/data/data.json";
 
+
 withRouter(props => <Main {...props} />);
 const styles = {
   bigAvatar: {
@@ -95,11 +96,7 @@ class Main extends Component {
       <div>
         {this.handleAvatar()}
         <div className="menu_btn">
-          <SideNavs
-            NavItems={this.state.navItems}
-            ButtonName={"My Resume"}
-            Component={Link}
-          />
+          <SideNavs NavItems={this.state.navItems} Component={Link} />
         </div>
 
         <Switch>
