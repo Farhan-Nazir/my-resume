@@ -1,0 +1,63 @@
+{
+  "profile": [
+    {
+      "name": "Jonny English",
+      "title": "Full-Stack Web Developer"
+    }
+  ],
+  "NetworkIcons": [
+    { "IconName": "github", "URL": "https://github.com/Farhan-Nazir" },
+    {
+      "IconName": "linkedIn",
+      "URL": "https://www.linkedin.com/in/farhan-nazir-a26b12137/"
+    },
+    { "IconName": "codePen", "URL": "https://github.com/Farhan-Nazir" },
+    { "IconName": "faceBook", "URL": "https://github.com/Farhan-Nazir" },
+    { "IconName": "instaGram", "URL": "https://github.com/Farhan-Nazir" }
+  ],
+  "Education": [
+    {
+      "startDate": "2014-01-03",
+      "endStart": "2016-03-01",
+      "titel": "Full-Stack Web Development",
+      "Description": "html, css, JS, node"
+    },
+    {
+      "startDate": "2016-05-03",
+      "endStart": "2017-03-01",
+      "titel": "Master",
+      "Description": "html, css, JS, node"
+    },
+    {
+      "startDate": "2010-01-03",
+      "endStart": "2013-03-01",
+      "titel": "Bachelor in Javascript ",
+      "Description": "html, css, JS, node"
+    }
+  ],
+  "OtherQualifications": [
+    {
+      "startDate": "2010-01-03",
+      "endStart": "2013-03-01",
+      "titel": "Bachelor in Javascript ",
+      "Description": "html, css, JS, node"
+    },
+    {
+      "startDate": "2010-01-03",
+      "endStart": "2013-03-01",
+      "titel": "Bachelor in Javascript ",
+      "Description": "html, css, JS, node"
+    },
+    {
+      "startDate": "2010-01-03",
+      "endStart": "2013-03-01",
+      "titel": "Bachelor in Javascript ",
+      "Description": "html, css, JS, node"
+    }
+  ],
+  "Skills": [
+    { "skillName": "Javascript", "skillLevel": "70" },
+    { "skillName": "Nodejs", "skillLevel": "45" },
+    { "skillName": "Reactjs", "skillLevel": "35" }
+  ]
+}

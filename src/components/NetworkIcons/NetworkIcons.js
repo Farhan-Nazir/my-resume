@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+import Data from "../../static/data/data.json";
 import {
   IoLogoLinkedin,
   IoLogoCodepen,
@@ -7,46 +8,49 @@ import {
   IoLogoInstagram
 } from "react-icons/io";
 
-const Icons = () => {
-  return (
-    <div>
-      <a
-        href="https://www.linkedin.com/in/farhan-nazir-a26b12137/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <IoLogoLinkedin />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/farhan-nazir-a26b12137/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <IoLogoGithub />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/farhan-nazir-a26b12137/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <IoLogoCodepen />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/farhan-nazir-a26b12137/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <IoLogoFacebook />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/farhan-nazir-a26b12137/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <IoLogoInstagram />
-      </a>
-    </div>
-  );
-};
+class NetworkIcons extends Component {
+  render() {
+    return (
+      <div>
+        <a
+          href={Data.NetworkIcons[0].URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoLogoGithub />
+        </a>
+        <a
+          href={Data.NetworkIcons[1].URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoLogoLinkedin />
+        </a>
 
-export default Icons;
+        <a
+          href={Data.NetworkIcons[2].URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoLogoCodepen />
+        </a>
+        <a
+          href={Data.NetworkIcons[3].URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoLogoFacebook />
+        </a>
+        <a
+          href={Data.NetworkIcons[4].URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoLogoInstagram />
+        </a>
+      </div>
+    );
+  }
+}
+
+export default NetworkIcons;

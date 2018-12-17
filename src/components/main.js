@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route, Link, withRouter } from "react-router-dom";
+import { Typography } from "@material-ui/core";
 
 //Pages
 import MainScreen from "../screens/MainScreen/MainScreen";
@@ -12,8 +13,8 @@ import Network from "../screens/Network/Network";
 import SideNavs from "./SideNavs/SideNavs";
 
 import ImageAvatars from "./ImageAvatars/ImageAvatars";
-import Miss from "../static/images/missExample.jpg";
-import { Typography } from "@material-ui/core";
+import ProfileImage from "../static/images/profile.jpg";
+import Data from "../static/data/data.json";
 
 withRouter(props => <Main {...props} />);
 const styles = {
@@ -23,6 +24,8 @@ const styles = {
     height: 260
   }
 };
+
+const profileName = Data.profile[0].name;
 
 class Main extends Component {
   state = {
@@ -69,18 +72,18 @@ class Main extends Component {
     if (this.props.location.pathname !== "/") {
       return (
         <div className="avatar">
-          <ImageAvatars Src={Miss} />
+          <ImageAvatars Src={ProfileImage} />
           <Typography gutterBottom align="center" color="inherit">
-            {"Emma Jones"}
+            {profileName}
           </Typography>
         </div>
       );
     } else {
       return (
         <div>
-          <ImageAvatars Src={Miss} AvatarClass={styles.bigAvatar} />
+          <ImageAvatars Src={ProfileImage} AvatarClass={styles.bigAvatar} />
           <Typography variant="h3" gutterBottom align="center" color="inherit">
-            {"Emma Jones"}
+            {profileName}
           </Typography>
         </div>
       );
