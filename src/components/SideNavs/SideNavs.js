@@ -4,10 +4,8 @@ import { withStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-
 
 const styles = {
   list: {
@@ -38,9 +36,13 @@ class SideNavs extends React.Component {
       <div className={classes.list}>
         <List>
           {NavItems.map(navItem => (
-            <ListItem button={true} key={navItem.id} component={this.props.Component} to={navItem.link}>
-              <ListItemText primary={navItem.name} >
-              </ListItemText>
+            <ListItem
+              button={true}
+              key={navItem.id}
+              component={this.props.Component}
+              to={navItem.link}
+            >
+              <ListItemText primary={navItem.name} />
             </ListItem>
           ))}
         </List>
@@ -53,8 +55,7 @@ class SideNavs extends React.Component {
           onClick={this.toggleDrawer("left", true)}
           style={{
             color: "white",
-            background: "linear-gradient(to right, #2193b0, #6dd5ed)",
-            
+            background: "linear-gradient(to right, #2193b0, #6dd5ed)"
           }}
         >
           {this.props.ButtonName}
