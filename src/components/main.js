@@ -11,7 +11,7 @@ import Education from "../screens/Education/Education";
 import Network from "../screens/Network/Network";
 import SideNavs from "./SideNavs/SideNavs";
 
-import Avatar from "./Avatar/Avatar";
+import ImageAvatars from "./ImageAvatars/ImageAvatars";
 import Miss from "../static/images/missExample.jpg";
 import { Typography } from "@material-ui/core";
 
@@ -69,7 +69,7 @@ class Main extends Component {
     if (this.props.location.pathname !== "/") {
       return (
         <div className="avatar">
-          <Avatar Src={Miss} />
+          <ImageAvatars Src={Miss} />
           <Typography gutterBottom align="center" color="inherit">
             {"Emma Jones"}
           </Typography>
@@ -78,7 +78,7 @@ class Main extends Component {
     } else {
       return (
         <div>
-          <Avatar Src={Miss} AvatarClass={styles.bigAvatar} />
+          <ImageAvatars Src={Miss} AvatarClass={styles.bigAvatar} />
           <Typography variant="h3" gutterBottom align="center" color="inherit">
             {"Emma Jones"}
           </Typography>
