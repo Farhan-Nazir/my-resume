@@ -13,15 +13,28 @@ class Education extends Component {
   componentWillMount() {
     this.setState({ educations: [...Data.Education] });
   }
-  
 
   render() {
     return (
-      <div>
+      <div style={{ marginLeft: 50 }}>
         My Education
         {this.state.educations.map(e => {
           return (
-          <li key={e.id}>{e.title} | {e.Description}</li>);
+            <ul style={{ marginLeft: 50, listStyle: "none" }}>
+              <li key={e.id}>
+                <div>
+                  Course: {e.title}
+                  <br />
+                  Description: {e.Description}
+                  <br />
+                  Start Date: {e.startDate}
+                  <br />
+                  End Date: {e.endDate}
+                  <br />
+                </div>
+              </li>
+            </ul>
+          );
         })}
       </div>
     );
