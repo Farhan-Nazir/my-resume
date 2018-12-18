@@ -50,6 +50,7 @@
   ],
   "OtherQualifications": [
     {
+      "id": 1,
       "startDate": "2010-01-03",
       "endDate": "2013-03-01",
       "title": "Bachelor in Javascript ",
@@ -57,6 +58,7 @@
       "description": "html, css, JS, node"
     },
     {
+      "id": 2,
       "startDate": "2010-01-03",
       "endDate": "2013-03-01",
       "title": "Bachelor in Javascript ",
@@ -64,6 +66,7 @@
       "description": "html, css, JS, node"
     },
     {
+      "id": 3,
       "startDate": "2010-01-03",
       "endDate": "2013-03-01",
       "title": "Bachelor in Javascript ",

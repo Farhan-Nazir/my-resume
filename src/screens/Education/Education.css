@@ -8,19 +8,40 @@ ul {
   padding: 1%;
 }
 .eduMain {
-  width: 70%;
-  margin: 2% auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-template-rows: auto;
 }
 
 .eduLeft {
-  border-right: 2px solid white;
-  padding: 2%;
+  grid-column: span(0,1);
+  border: solid 1px white;
+ margin-left: 10em;
 }
 
 .eduRight {
-  padding: 2%;
-  margin-left: 2%;
+  grid-column: span(2,3);
+  border: solid 1px white;
+  margin-right: 10em;
+}
+
+.sexy_line {
+  grid-column: span(2);
+  height: 40em;
+  margin-top: 1.5em;
+  margin-left: 20em;
+  border: none;
+  color: black;
+  width: 1px;
+  background: -webkit-gradient(
+    radial,
+    50% 50%,
+    0,
+    50% 50%,
+    200,
+    from(rgb(30, 56, 66)),
+    to(rgb(253, 253, 253)),
+    color-stop(50%, rgb(19, 66, 105))
+  );
 }
