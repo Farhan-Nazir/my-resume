@@ -5,8 +5,12 @@
       "title": "Full-Stack Web Developer"
     }
   ],
-  "ContactInfo":[
-    {"Address":"Testgatan 65a, 21751 Malmö", "email":"test@gmail.com","ph":"0700885522"}
+  "ContactInfo": [
+    {
+      "Address": "Testgatan 65a, 21751 Malmö",
+      "email": "test@gmail.com",
+      "ph": "0700885522"
+    }
   ],
   "NetworkIcons": [
     { "IconName": "github", "URL": "https://github.com/Farhan-Nazir" },
@@ -24,21 +28,24 @@
       "startDate": "2014-01-03",
       "endDate": "2016-03-01",
       "title": "Full-Stack Web Development",
-      "Description": "html, css, JS, node"
+      "school": "Hack Your Future",
+      "description": "html, css, JS, node"
     },
     {
       "id": 2,
       "startDate": "2016-05-03",
       "endDate": "2017-03-01",
       "title": "Master",
-      "Description": "html, css, JS, node"
+      "school": "Chalmers University of Technology",
+      "description": "html, css, JS, node"
     },
     {
       "id": 3,
       "startDate": "2010-01-03",
       "endDate": "2013-03-01",
       "title": "Bachelor in Javascript ",
-      "Description": "html, css, JS, node"
+      "school": "Lund University",
+      "description": "html, css, JS, node"
     }
   ],
   "OtherQualifications": [
@@ -46,19 +53,22 @@
       "startDate": "2010-01-03",
       "endDate": "2013-03-01",
       "title": "Bachelor in Javascript ",
-      "Description": "html, css, JS, node"
+      "school": "Lund University",
+      "description": "html, css, JS, node"
     },
     {
       "startDate": "2010-01-03",
       "endDate": "2013-03-01",
       "title": "Bachelor in Javascript ",
-      "Description": "html, css, JS, node"
+      "school": "Lund University",
+      "description": "html, css, JS, node"
     },
     {
       "startDate": "2010-01-03",
       "endDate": "2013-03-01",
       "title": "Bachelor in Javascript ",
-      "Description": "html, css, JS, node"
+      "school": "Lund University",
+      "description": "html, css, JS, node"
     }
   ],
   "Skills": [
@@ -68,20 +78,26 @@
   ],
   "Experiences": [
     {
-      "startDate":"2005-03-01",
-      "endDate":"2007-05-01",
-      "companyName":"Manpower Ab",
-      "Description":"IT-Consult at Sony, Skandiatransort"
+      "startDate": "2005-03-01",
+      "endDate": "2007-05-01",
+      "companyName": "Manpower Ab",
+      "description": "IT-Consult at Sony, Skandiatransort"
     },
     {
-      "startDate":"20010-03-01",
-      "endDate":"2007-08-01",
-      "companyName":"Å-R carton Ab",
-      "Description":"Robotic Machine Technician"
+      "startDate": "20010-03-01",
+      "endDate": "2007-08-01",
+      "companyName": "Å-R carton Ab",
+      "description": "Robotic Machine Technician"
     }
   ],
-  "Projects":[
-    {"projectName":"Pixabay Seacrh Engine", "projectDemoUrl":"http://github.com/Farhan-Nazir"},
-    {"projectName":"Pig Game", "projectDemoUrl":"http://github.com/Farhan-Nazir/pig-game"}
+  "Projects": [
+    {
+      "projectName": "Pixabay Seacrh Engine",
+      "projectDemoUrl": "http://github.com/Farhan-Nazir"
+    },
+    {
+      "projectName": "Pig Game",
+      "projectDemoUrl": "http://github.com/Farhan-Nazir/pig-game"
+    }
   ]
 }

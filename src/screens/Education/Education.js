@@ -23,9 +23,11 @@ class Education extends Component {
             <ul style={{ marginLeft: 50, listStyle: "none" }}>
               <li key={e.id}>
                 <div>
-                  Course: {e.title}
+                  University: {e.school}
                   <br />
-                  Description: {e.Description}
+                  Degree: {e.title}
+                  <br />
+                  Description: {e.description}
                   <br />
                   Start Date: {e.startDate}
                   <br />
