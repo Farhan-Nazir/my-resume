@@ -1,40 +1,49 @@
 body {
-  background: #c94b4b;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #c94b4b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4b134f,
+    #c94b4b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4b134f,
+    #c94b4b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+  color: azure;
+}
 
-color: azure;
+.avatarTitle {
 }
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   grid-auto-rows: 200px;
-  grid-template-areas: 
+  grid-template-areas:
     ". . "
     "a a";
 }
- a {
-   color: inherit;
-   font-size: 1.5em;
-   padding: .3em;
- }
+a {
+  color: inherit;
+  font-size: 1.5em;
+  padding: 0.3em;
+}
 
-.avatar{
+.avatar {
   grid-area: a;
   align-self: center;
   justify-self: center;
-  
+
 }
 
 .avatarName {
   font-size: 3em;
   text-align: center;
- 
 }
 
-.bigAvatar{
+.bigAvatar {
   margin: 10;
   width: 260px;
   height: 260px;

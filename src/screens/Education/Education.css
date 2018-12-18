@@ -1,5 +1,26 @@
-.avatarDiv{
-color: yellow;
-border: 2px solid black;
+h2 {
+  padding: 1%;
+  margin: 1%;
 }
 
+ul {
+  margin: 1%;
+  padding: 1%;
+}
+.eduMain {
+  width: 70%;
+  margin: 2% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eduLeft {
+  border-right: 2px solid white;
+  padding: 2%;
+}
+
+.eduRight {
+  padding: 2%;
+  margin-left: 2%;
+}

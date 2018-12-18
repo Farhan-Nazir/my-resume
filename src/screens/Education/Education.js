@@ -16,28 +16,54 @@ class Education extends Component {
 
   render() {
     return (
-      <div style={{ marginLeft: 50 }}>
-        My Education
-        {this.state.educations.map(e => {
-          return (
-            <ul style={{ marginLeft: 50, listStyle: "none" }}>
-              <li key={e.id}>
-                <div>
-                  University: {e.school}
-                  <br />
-                  Degree: {e.title}
-                  <br />
-                  Description: {e.description}
-                  <br />
-                  Start Date: {e.startDate}
-                  <br />
-                  End Date: {e.endDate}
-                  <br />
-                </div>
-              </li>
-            </ul>
-          );
-        })}
+      <div className="eduMain">
+        <div className="edu eduLeft">
+          <h2> Education </h2>
+          {this.state.educations.map(e => {
+            return (
+              <ul style={{ listStyle: "none" }}>
+                <li key={e.id}>
+                  <div>
+                    University: {e.school}
+                    <br />
+                    Degree: {e.title}
+                    <br />
+                    Description: {e.description}
+                    <br />
+                    Start Date: {e.startDate}
+                    <br />
+                    End Date: {e.endDate}
+                    <br />
+                  </div>
+                </li>
+              </ul>
+            );
+          })}
+        </div>
+
+        <div className="edu eduRight">
+          <h2> Other Qualifications </h2>
+          {this.state.educations.map(e => {
+            return (
+              <ul className="" style={{ listStyle: "none" }}>
+                <li key={e.id}>
+                  <div>
+                    University: {e.school}
+                    <br />
+                    Degree: {e.title}
+                    <br />
+                    Description: {e.description}
+                    <br />
+                    Start Date: {e.startDate}
+                    <br />
+                    End Date: {e.endDate}
+                    <br />
+                  </div>
+                </li>
+              </ul>
+            );
+          })}
+        </div>
       </div>
     );
   }

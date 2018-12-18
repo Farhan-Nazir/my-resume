@@ -16,7 +16,6 @@ import ImageAvatars from "./ImageAvatars/ImageAvatars";
 import ProfileImage from "../static/images/profile.jpg";
 import Data from "../static/data/data.json";
 
-
 withRouter(props => <Main {...props} />);
 const styles = {
   bigAvatar: {
@@ -74,7 +73,7 @@ class Main extends Component {
       return (
         <div className="avatar">
           <ImageAvatars Src={ProfileImage} />
-          <Typography gutterBottom align="center" color="inherit">
+          <Typography gutterBottom align="center" color="inherit" style={{border:"2px solid white"}}>
             {profileName}
           </Typography>
         </div>
