@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route, Link, withRouter } from "react-router-dom";
-import { Typography } from "@material-ui/core";
+import { Typography, Grow } from "@material-ui/core";
 
 //Pages
 import MainScreen from "../screens/MainScreen/MainScreen";
@@ -65,27 +65,50 @@ class Main extends Component {
         name: "Experiences",
         link: "/experiences"
       }
-    ]
+    ],
+    transition: true
   };
 
   handleAvatar = () => {
     if (this.props.location.pathname !== "/") {
       return (
-        <div className="avatar">
-          <ImageAvatars Src={ProfileImage} />
-          <Typography gutterBottom align="center" color="inherit" style={{border:"2px solid white"}}>
-            {profileName}
-          </Typography>
-        </div>
+        <Grow
+          in={this.state.transition}
+          style={{ transformOrigin: "0 0 0" }}
+          {...(this.state.transition ? { timeout: 800 } : {})}
+        >
+          <div className="avatar">
+            <ImageAvatars Src={ProfileImage} />
+            <Typography
+              gutterBottom
+              align="center"
+              color="inherit"
+              style={{ border: "2px solid white" }}
+            >
+              {profileName}
+            </Typography>
+          </div>
+        </Grow>
       );
     } else {
       return (
-        <div>
-          <ImageAvatars Src={ProfileImage} AvatarClass={styles.bigAvatar} />
-          <Typography variant="h3" gutterBottom align="center" color="inherit">
-            {profileName}
-          </Typography>
-        </div>
+        <Grow
+          in={this.state.transition}
+          style={{ transformOrigin: "0 0 0" }}
+          {...(this.state.transition ? { timeout: 800 } : {})}
+        >
+          <div>
+            <ImageAvatars Src={ProfileImage} AvatarClass={styles.bigAvatar} />
+            <Typography
+              variant="h3"
+              gutterBottom
+              align="center"
+              color="inherit"
+            >
+              {profileName}
+            </Typography>
+          </div>
+        </Grow>
       );
     }
   };
