@@ -6,8 +6,21 @@
   font-size: calc(10px + 2vmin);
 }
 
-.avatar {
-  margin-left: 90%;
+.loggedAs {
+  width: 10%;
+  display: flex;
+  margin-left: 89%;
+}
+
+.loggedAsuserName {
+  margin: 0 0.25rem;
+}
+
+.loggedAsavatar {
+  margin: 0.5rem 0.25rem;
+}
+
+.profileName {
 }
 
 @keyframes App-logo-spin {

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Education.css";
 import Data from "../../static/data/data.json";
+
+
 class Education extends Component {
   constructor(props) {
     super(props);

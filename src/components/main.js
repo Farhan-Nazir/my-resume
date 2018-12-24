@@ -71,11 +71,15 @@ class Main extends Component {
   handleAvatar = () => {
     if (this.props.location.pathname !== "/") {
       return (
-        <div className="avatar">
-          <ImageAvatars Src={ProfileImage} />
-          <Typography gutterBottom align="center" color="inherit" style={{border:"2px solid white"}}>
-            {profileName}
-          </Typography>
+        <div className="loggedAs">
+          <div className="loggedAsuserName">
+            <Typography gutterBottom align="center" color="inherit">
+              <h5 className="profileName">{profileName}</h5>
+            </Typography>
+          </div>
+          <div className="loggedAsavatar">
+            <ImageAvatars Src={ProfileImage} />
+          </div>
         </div>
       );
     } else {

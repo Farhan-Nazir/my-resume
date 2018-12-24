@@ -15,13 +15,13 @@ ul {
 }
 
 .eduLeft {
-  grid-column: span(0,1);
+  grid-column: span(0, 1);
   border: solid 1px white;
- margin-left: 10em;
+  margin-left: 10em;
 }
 
 .eduRight {
-  grid-column: span(2,3);
+  grid-column: span(2, 3);
   border: solid 1px white;
   margin-right: 10em;
 }
