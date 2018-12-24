@@ -61,16 +61,16 @@
       "id": 2,
       "startDate": "2010-01-03",
       "endDate": "2013-03-01",
-      "title": "Bachelor in Javascript ",
-      "school": "Lund University",
+      "title": "Bachelor in Reactjs ",
+      "school": "Malmö University",
       "description": "html, css, JS, node"
     },
     {
       "id": 3,
       "startDate": "2010-01-03",
       "endDate": "2013-03-01",
-      "title": "Bachelor in Javascript ",
-      "school": "Lund University",
+      "title": "Master in Javascript ",
+      "school": "Kalmar University",
       "description": "html, css, JS, node"
     }
   ],
