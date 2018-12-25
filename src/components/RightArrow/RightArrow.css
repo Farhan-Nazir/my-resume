@@ -1,0 +1,9 @@
+.arrowDiv {
+  text-align: center;
+  width: 1.5%;
+  margin: 1% auto;
+}
+
+.arrowDiv:hover {
+  cursor: pointer;
+}

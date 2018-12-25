@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import Grow from "@material-ui/core/Grow";
+import { FaArrowRight } from "react-icons/fa";
 import "./Education.css";
 import Data from "../../static/data/data.json";
 import PaperSheet from "../../components/PaperSheet/PaperSheet";
+import RightArrow from "../../components/RightArrow/RightArrow"
 
 class Education extends Component {
   constructor(props) {
@@ -83,6 +85,7 @@ class Education extends Component {
             </div>
           </Grow>
         </div>
+        <RightArrow/>
       </div>
     );
   }
