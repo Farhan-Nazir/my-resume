@@ -28,13 +28,13 @@ li:hover {
 
 .eduLeft {
   grid-column: span(0, 1);
-  border: solid 1px white;
+  text-align: center;
   margin-left: 10em;
 }
 
 .eduRight {
   grid-column: span(2, 3);
-  border: solid 1px white;
+  text-align: center;
   margin-right: 10em;
 }
 

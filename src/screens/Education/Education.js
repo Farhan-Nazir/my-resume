@@ -3,9 +3,9 @@ import Grow from "@material-ui/core/Grow";
 import { FaArrowRight } from "react-icons/fa";
 import "./Education.css";
 import Data from "../../static/data/data.json";
-import PaperSheet from "../../components/PaperSheet/PaperSheet";
-import RightArrow from "../../components/RightArrow/RightArrow"
-
+//import PaperSheet from "../../components/PaperSheet/PaperSheet";
+import RightArrow from "../../components/RightArrow/RightArrow";
+import { Paper, Typography } from "@material-ui/core";
 class Education extends Component {
   constructor(props) {
     super(props);
@@ -32,23 +32,29 @@ class Education extends Component {
             {...(transition ? { timeout: 800 } : {})}
           >
             <div className="edu eduLeft">
-              <h1> Education </h1>
-              {this.state.educations.map(e => {
-                return (
-                  <ul style={{ listStyle: "none" }}>
-                    <li>
-                      <PaperSheet
-                        key={e.id}
-                        uni={e.school}
-                        degree={e.title}
-                        description={e.description}
-                        startDate={e.startDate}
-                        endDate={e.endDate}
-                      />
-                    </li>
-                  </ul>
-                );
-              })}
+              <Paper>
+                <Typography gutterBottom variant={"h5"} component="h1">
+                  Education
+                </Typography>
+
+                {this.state.educations.map((e, i) => {
+                  return (
+                    <Paper key={i} elevation={20}>
+                      <Typography
+                        align={"center"}
+                        variant={"h6"}
+                        component={"h5"}
+                      >
+                        {e.school}
+                      </Typography>
+                      <Typography>{e.title}</Typography>
+                      <Typography>{e.description}</Typography>
+                      <Typography>{e.startDate}</Typography>
+                      <Typography>{e.endDate}</Typography>
+                    </Paper>
+                  );
+                })}
+              </Paper>
             </div>
           </Grow>
           <Grow
@@ -65,27 +71,33 @@ class Education extends Component {
             {...(transition ? { timeout: 1600 } : {})}
           >
             <div className="edu eduRight">
-              <h1> Other Qualifications </h1>
-              {this.state.otherQualifications.map(e => {
-                return (
-                  <ul className="" style={{ listStyle: "none" }}>
-                    <li>
-                      <PaperSheet
-                        key={e.id}
-                        uni={e.school}
-                        degree={e.title}
-                        description={e.description}
-                        startDate={e.startDate}
-                        endDate={e.endDate}
-                      />
-                    </li>
-                  </ul>
-                );
-              })}
+              <Paper>
+                <Typography gutterBottom variant={"h5"} component="h1">
+                  Other Qualifications
+                </Typography>
+
+                {this.state.otherQualifications.map((e, i) => {
+                  return (
+                    <Paper key={i} elevation={20}>
+                      <Typography
+                        align={"center"}
+                        variant={"h6"}
+                        component={"h5"}
+                      >
+                        {e.school}
+                      </Typography>
+                      <Typography>{e.title}</Typography>
+                      <Typography>{e.description}</Typography>
+                      <Typography>{e.startDate}</Typography>
+                      <Typography>{e.endDate}</Typography>
+                    </Paper>
+                  );
+                })}
+              </Paper>
             </div>
           </Grow>
         </div>
-        <RightArrow/>
+        <RightArrow />
       </div>
     );
   }
