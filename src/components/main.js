@@ -72,18 +72,6 @@ class Main extends Component {
   handleAvatar = () => {
     if (this.props.location.pathname !== "/") {
       return (
-<<<<<<< HEAD
-        <div className="loggedAs">
-          <div className="loggedAsuserName">
-            <Typography gutterBottom align="center" color="inherit">
-              <h5 className="profileName">{profileName}</h5>
-            </Typography>
-          </div>
-          <div className="loggedAsavatar">
-            <ImageAvatars Src={ProfileImage} />
-          </div>
-        </div>
-=======
         <Grow
           in={this.state.transition}
           style={{ transformOrigin: "0 0 0" }}
@@ -101,7 +89,6 @@ class Main extends Component {
             </Typography>
           </div>
         </Grow>
->>>>>>> bb16cb68dee67e648ce974808b8956eac9896213
       );
     } else {
       return (

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Grow from "@material-ui/core/Grow";
 import "./Education.css";
 import Data from "../../static/data/data.json";
-
+import PaperSheet from "../../components/PaperSheet/PaperSheet";
 
 class Education extends Component {
   constructor(props) {
@@ -30,23 +30,19 @@ class Education extends Component {
             {...(transition ? { timeout: 800 } : {})}
           >
             <div className="edu eduLeft">
-              <h2> Education </h2>
+              <h1> Education </h1>
               {this.state.educations.map(e => {
                 return (
                   <ul style={{ listStyle: "none" }}>
-                    <li key={e.id}>
-                      <div>
-                        University: {e.school}
-                        <br />
-                        Degree: {e.title}
-                        <br />
-                        Description: {e.description}
-                        <br />
-                        Start Date: {e.startDate}
-                        <br />
-                        End Date: {e.endDate}
-                        <br />
-                      </div>
+                    <li>
+                      <PaperSheet
+                        key={e.id}
+                        uni={e.school}
+                        degree={e.title}
+                        description={e.description}
+                        startDate={e.startDate}
+                        endDate={e.endDate}
+                      />
                     </li>
                   </ul>
                 );
@@ -67,23 +63,19 @@ class Education extends Component {
             {...(transition ? { timeout: 1600 } : {})}
           >
             <div className="edu eduRight">
-              <h2> Other Qualifications </h2>
+              <h1> Other Qualifications </h1>
               {this.state.otherQualifications.map(e => {
                 return (
                   <ul className="" style={{ listStyle: "none" }}>
-                    <li key={e.id}>
-                      <div>
-                        University: {e.school}
-                        <br />
-                        Degree: {e.title}
-                        <br />
-                        Description: {e.description}
-                        <br />
-                        Start Date: {e.startDate}
-                        <br />
-                        End Date: {e.endDate}
-                        <br />
-                      </div>
+                    <li>
+                      <PaperSheet
+                        key={e.id}
+                        uni={e.school}
+                        degree={e.title}
+                        description={e.description}
+                        startDate={e.startDate}
+                        endDate={e.endDate}
+                      />
                     </li>
                   </ul>
                 );
