@@ -20,7 +20,8 @@
   margin: 0.5rem 0.25rem;
 }
 
-.profileName {
+.next-button {
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

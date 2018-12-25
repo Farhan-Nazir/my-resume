@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route, Link, withRouter } from "react-router-dom";
 import { Typography, Grow } from "@material-ui/core";
+import { FaArrowCircleRight } from "react-icons/fa";
 
 //Pages
 import MainScreen from "../screens/MainScreen/MainScreen";
@@ -113,14 +114,31 @@ class Main extends Component {
     }
   };
 
+  handleNextButton() {
+    const { navItems } = this.state;
+    let pageIndex = navItems.findIndex(
+      e => e.link === this.props.location.pathname
+    );
+    if (pageIndex <= 5) {
+      return (
+        <Link to={navItems[pageIndex + 1].link}>
+          <FaArrowCircleRight style={{ width: 30, height: 30 }} />
+        </Link>
+      );
+    }
+    //console.log(pageIndex);
+  }
+
   render() {
     return (
       <div>
-        {this.handleAvatar()}
-        <div className="menu_btn">
-          <SideNavs NavItems={this.state.navItems} Component={Link} />
+        <div>
+          {this.handleAvatar()}
+          <div className="menu_btn">
+            <SideNavs NavItems={this.state.navItems} Component={Link} />
+          </div>
         </div>
-
+        <div className="next-button">{this.handleNextButton()}</div>
         <Switch>
           <Route exact path="/" component={MainScreen} />
           <Route path="/resume" component={Resume} />
