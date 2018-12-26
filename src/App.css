@@ -26,12 +26,12 @@
   margin: 1% auto;
 }
 
-.next-button {
+.nextButton {
   margin: 0.5em;
   display: inline-block;
 }
 
-.previous-button {
+.previousButton {
   margin: 0.5em;
   display: inline-block;
 }

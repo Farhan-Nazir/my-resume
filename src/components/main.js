@@ -152,8 +152,8 @@ class Main extends Component {
           </div>
         </div>
         <div className="nextPrevriousButtons">
-          <div className="previous-button">{this.handlePreviousButton()}</div>
-          <div className="next-button">{this.handleNextButton()}</div>
+          <div className="previousButton">{this.handlePreviousButton()}</div>
+          <div className="nextButton">{this.handleNextButton()}</div>
         </div>
 
         <Switch>
