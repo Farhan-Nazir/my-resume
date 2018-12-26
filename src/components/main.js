@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route, Link, withRouter } from "react-router-dom";
 import { Typography, Grow } from "@material-ui/core";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 
 //Pages
 import MainScreen from "../screens/MainScreen/MainScreen";
@@ -119,14 +119,27 @@ class Main extends Component {
     let pageIndex = navItems.findIndex(
       e => e.link === this.props.location.pathname
     );
-    if (pageIndex >= 1 && pageIndex <= 5 ) {
+    if (pageIndex >= 1 && pageIndex <= 5) {
       return (
         <Link to={navItems[pageIndex + 1].link}>
           <FaArrowCircleRight style={{ width: 30, height: 30 }} />
         </Link>
       );
     }
-    //console.log(pageIndex);
+  }
+
+  handlePreviousButton() {
+    const { navItems } = this.state;
+    let pageIndex = navItems.findIndex(
+      e => e.link === this.props.location.pathname
+    );
+    if (pageIndex > 1 && pageIndex <= 6) {
+      return (
+        <Link to={navItems[pageIndex - 1].link}>
+          <FaArrowCircleLeft style={{ width: 30, height: 30 }} />
+        </Link>
+      );
+    }
   }
 
   render() {
@@ -138,7 +151,11 @@ class Main extends Component {
             <SideNavs NavItems={this.state.navItems} Component={Link} />
           </div>
         </div>
-        <div className="next-button">{this.handleNextButton()}</div>
+        <div className="nextPrevriousButtons">
+          <div className="previous-button">{this.handlePreviousButton()}</div>
+          <div className="next-button">{this.handleNextButton()}</div>
+        </div>
+
         <Switch>
           <Route exact path="/" component={MainScreen} />
           <Route path="/resume" component={Resume} />
