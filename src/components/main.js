@@ -119,7 +119,7 @@ class Main extends Component {
     let pageIndex = navItems.findIndex(
       e => e.link === this.props.location.pathname
     );
-    if (pageIndex <= 5) {
+    if (pageIndex >= 1 && pageIndex <= 5 ) {
       return (
         <Link to={navItems[pageIndex + 1].link}>
           <FaArrowCircleRight style={{ width: 30, height: 30 }} />
