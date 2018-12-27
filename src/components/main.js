@@ -114,33 +114,41 @@ class Main extends Component {
     }
   };
 
-  handleNextButton() {
+  handlePreviousNextButtons() {
     const { navItems } = this.state;
     let pageIndex = navItems.findIndex(
       e => e.link === this.props.location.pathname
     );
+
     if (pageIndex >= 1 && pageIndex <= 5) {
       return (
-        <Link to={navItems[pageIndex + 1].link}>
-          <FaArrowCircleRight style={{ width: 30, height: 30 }} />
-        </Link>
+        <div className="nextPreviousButtons">
+          <div className="nextButton">
+            <Link to={navItems[pageIndex + 1].link}>
+              <FaArrowCircleRight style={{ width: 30, height: 30 }} />
+            </Link>
+          </div>
+          <div className="previousButton">
+            <Link to={navItems[pageIndex - 1].link}>
+              <FaArrowCircleLeft style={{ width: 30, height: 30 }} />
+            </Link>
+          </div>
+        </div>
+      );
+    }
+    if (pageIndex == 6) {
+      return (
+        <div className="nextPreviousButtons">
+          <div className="previousButton">
+            <Link to={navItems[pageIndex - 1].link}>
+              <FaArrowCircleLeft style={{ width: 30, height: 30 }} />
+            </Link>
+          </div>
+        </div>
       );
     }
   }
 
-  handlePreviousButton() {
-    const { navItems } = this.state;
-    let pageIndex = navItems.findIndex(
-      e => e.link === this.props.location.pathname
-    );
-    if (pageIndex > 1 && pageIndex <= 6) {
-      return (
-        <Link to={navItems[pageIndex - 1].link}>
-          <FaArrowCircleLeft style={{ width: 30, height: 30 }} />
-        </Link>
-      );
-    }
-  }
 
   render() {
     return (
@@ -151,10 +159,9 @@ class Main extends Component {
             <SideNavs NavItems={this.state.navItems} Component={Link} />
           </div>
         </div>
-        <div className="nextPrevriousButtons">
-          <div className="previousButton">{this.handlePreviousButton()}</div>
-          <div className="nextButton">{this.handleNextButton()}</div>
-        </div>
+
+        {/* <div className="previousButton">{this.handlePreviousButton()}</div> */}
+        {this.handlePreviousNextButtons()}
 
         <Switch>
           <Route exact path="/" component={MainScreen} />
