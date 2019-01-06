@@ -46,7 +46,7 @@ class Projects extends Component {
                     </Typography>
                     <Typography
                       align={"center"}
-                      variant={"h9"}
+                      variant={"h6"}
                       component={"h5"}
                     >
                       <a className="projectLink" href={e.projectDemoUrl}>
