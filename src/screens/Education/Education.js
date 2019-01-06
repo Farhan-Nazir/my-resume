@@ -3,6 +3,7 @@ import Grow from "@material-ui/core/Grow";
 import "./Education.css";
 import Data from "../../static/data/data.json";
 import { Paper, Typography } from "@material-ui/core";
+import TimeLine from "../../components/TimeLine/TimeLine";
 class Education extends Component {
   constructor(props) {
     super(props);
@@ -36,19 +37,17 @@ class Education extends Component {
 
                 {this.state.educations.map((e, i) => {
                   return (
-                    <Paper key={i} elevation={20}>
-                      <Typography
-                        align={"center"}
-                        variant={"h6"}
-                        component={"h5"}
-                      >
-                        {e.school}
-                      </Typography>
-                      <Typography>{e.title}</Typography>
-                      <Typography>{e.description}</Typography>
-                      <Typography>{e.startDate}</Typography>
-                      <Typography>{e.endDate}</Typography>
-                    </Paper>
+                    <div>
+                      <Paper key={i} elevation={20}>
+                        <TimeLine
+                          startDate={e.startDate}
+                          endDate={e.endDate}
+                          title={e.title}
+                          school={e.school}
+                          description={e.description}
+                        />
+                      </Paper>
+                    </div>
                   );
                 })}
               </Paper>
