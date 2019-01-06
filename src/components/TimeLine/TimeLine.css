@@ -1,0 +1,67 @@
+.container {
+  color: black;
+  height: 200px;
+  text-align: left;
+}
+.propsContainer{
+  padding: 0.5em;
+
+}
+.container ul:before {
+  content: "";
+  width: 1px;
+  position: absolute;
+}
+.container ul li {
+  position: relative;
+  margin-left: 30px;
+  padding: 14px;
+  width: 250px;
+  list-style: none;
+}
+.container ul li:not(:first-child) {
+  margin-top: 60px;
+}
+.container ul li > span {
+  width: 2px;
+  height: 100%;
+  background: black;
+  left: 10px;
+  top: 0;
+  position: absolute;
+}
+.container ul li > span:before,
+.container ul li > span:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  background: red;
+  left: -5px;
+  top: 0;
+}
+.container ul li span:after {
+  top: 100%;
+}
+
+.container div .title,
+.container div .type {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.container span.number span {
+  position: absolute;
+  font-size: 10px;
+  left: -65px;
+  font-weight: bold;
+  width: 70px;
+}
+.container span.number span:first-child {
+  top: 0;
+}
+.container span.number span:last-child {
+  top: 100%;
+}
