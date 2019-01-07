@@ -123,14 +123,14 @@ class Main extends Component {
     if (pageIndex >= 1 && pageIndex <= 5) {
       return (
         <div className="nextPreviousButtons">
-          <div className="nextButton">
-            <Link to={navItems[pageIndex + 1].link}>
-              <FaArrowCircleRight style={{ width: 30, height: 30 }} />
-            </Link>
-          </div>
           <div className="previousButton">
             <Link to={navItems[pageIndex - 1].link}>
               <FaArrowCircleLeft style={{ width: 30, height: 30 }} />
+            </Link>
+          </div>
+          <div className="nextButton">
+            <Link to={navItems[pageIndex + 1].link}>
+              <FaArrowCircleRight style={{ width: 30, height: 30 }} />
             </Link>
           </div>
         </div>
@@ -148,7 +148,6 @@ class Main extends Component {
       );
     }
   }
-
 
   render() {
     console.log(this.props.location);

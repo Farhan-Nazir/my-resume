@@ -1,11 +1,9 @@
 .container {
-  color: black;
   height: 200px;
   text-align: left;
 }
-.propsContainer{
+.propsContainer {
   padding: 0.5em;
-
 }
 .container ul:before {
   content: "";
@@ -58,6 +56,7 @@
   left: -65px;
   font-weight: bold;
   width: 70px;
+  color: black;
 }
 .container span.number span:first-child {
   top: 0;
