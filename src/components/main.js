@@ -10,7 +10,7 @@ import Projects from "../screens/Projects/Projects";
 import Experiences from "../screens/Experiences/Experiences";
 import Skills from "../screens/Skills/Skills";
 import Education from "../screens/Education/Education";
-import Network from "../screens/Network/Network";
+import MyGithub from "../screens/MyGithub/MyGithub";
 import SideNavs from "./SideNavs/SideNavs";
 
 import ImageAvatars from "./ImageAvatars/ImageAvatars";
@@ -58,8 +58,8 @@ class Main extends Component {
       },
       {
         id: 6,
-        name: "My Network",
-        link: "/network"
+        name: "My Github",
+        link: "/myGithub"
       },
       {
         id: 7,
@@ -136,7 +136,7 @@ class Main extends Component {
         </div>
       );
     }
-    if (pageIndex == 6) {
+    if (pageIndex === 6) {
       return (
         <div className="nextPreviousButtons">
           <div className="previousButton">
@@ -170,7 +170,7 @@ class Main extends Component {
           <Route path="/experiences" component={Experiences} />
           <Route path="/skills" component={Skills} />
           <Route path="/education" component={Education} />
-          <Route path="/network" component={Network} />
+          <Route path="/mygithub" component={MyGithub} />
         </Switch>
       </div>
     );
