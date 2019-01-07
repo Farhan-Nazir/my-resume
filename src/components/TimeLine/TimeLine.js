@@ -6,12 +6,14 @@ class TimeLine extends Component {
   state = {};
   render() {
     return (
-      <div className="container">
+      <div className="timeLine">
         <ul>
           <li>
             <span />
             <div className="propsContainer">
-              <Typography>{this.props.title}</Typography>
+              <Typography variant={"h6"} component={"h6"}>
+                {this.props.title}
+              </Typography>
               <Typography>{this.props.school}</Typography>
               <Typography>{this.props.description}</Typography>
             </div>

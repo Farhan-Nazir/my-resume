@@ -1,66 +1,67 @@
-.container {
-  height: 200px;
+.timeLine {
+  height: 100%;
   text-align: left;
+  padding: 1em;
 }
 .propsContainer {
   padding: 0.5em;
 }
-.container ul:before {
+.timeLine ul:before {
   content: "";
   width: 1px;
   position: absolute;
 }
-.container ul li {
+.timeLine ul li {
   position: relative;
-  margin-left: 30px;
-  padding: 14px;
-  width: 250px;
+  margin-left: 0px;
+  padding: 20px;
+  width: 400px;
   list-style: none;
 }
-.container ul li:not(:first-child) {
+.timeLine ul li:not(:first-child) {
   margin-top: 60px;
 }
-.container ul li > span {
+.timeLine ul li > span {
   width: 2px;
   height: 100%;
-  background: black;
-  left: 10px;
+  background: #bdc3c7;
+  left: -10px;
   top: 0;
   position: absolute;
 }
-.container ul li > span:before,
-.container ul li > span:after {
+.timeLine ul li > span:before,
+.timeLine ul li > span:after {
   content: "";
   width: 8px;
   height: 8px;
   border-radius: 50%;
   border: 2px solid #fff;
   position: absolute;
-  background: red;
+  background: #2c3e50;
   left: -5px;
-  top: 0;
+  top: 0px;
 }
-.container ul li span:after {
+.timeLine ul li span:after {
   top: 100%;
 }
 
-.container div .title,
-.container div .type {
+.timeLine div .title,
+.timeLine div .type {
   font-weight: 600;
   font-size: 12px;
 }
 
-.container span.number span {
+.timeLine span.number span {
   position: absolute;
   font-size: 10px;
-  left: -65px;
+  left: 15px;
   font-weight: bold;
   width: 70px;
   color: black;
 }
-.container span.number span:first-child {
+.timeLine span.number span:first-child {
   top: 0;
 }
-.container span.number span:last-child {
+.timeLine span.number span:last-child {
   top: 100%;
 }
