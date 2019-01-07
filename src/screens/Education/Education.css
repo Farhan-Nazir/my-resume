@@ -24,20 +24,22 @@ h1 {
 
 .sexy_line {
   grid-column: span(2);
-  height: 40em;
-  margin-top: 1.5em;
-  margin-left: 20em;
-  border: none;
+  height: 100%;
+  margin: 0.5em 5em;
   color: black;
-  width: 1px;
-  background: -webkit-gradient(
-    radial,
-    50% 50%,
-    0,
-    50% 50%,
-    200,
-    from(rgb(30, 56, 66)),
-    to(rgb(253, 253, 253)),
-    color-stop(50%, rgb(19, 66, 105))
-  );
+  width: 2px;
+  background: white;
+}
+
+.timeLineTypgraphyWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.wrappedTimeLine {
+  border: 2px solid red;
+}
+
+.wrappedTypography {
+  border: 2px solid red;
 }
