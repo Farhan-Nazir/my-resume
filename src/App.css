@@ -6,20 +6,6 @@
   font-size: calc(10px + 2vmin);
 }
 
-.loggedAs {
-  width: 10%;
-  display: flex;
-  margin-left: 89%;
-}
-
-.loggedAsuserName {
-  margin: 0 0.25rem;
-}
-
-.loggedAsavatar {
-  margin: 0.5rem 0.25rem;
-}
-
 .nextPreviousButtons {
   width: 8%;
   text-align: center;
@@ -43,4 +29,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.top {
+  background-color: white;
+  padding: 5px;
+}
+
+.loggedAs {
+  width: 15%;
+  text-align: right;
+  display: flex;
+  margin-left: 85%;
+}
+
+.loggedAsuserName {
+  margin: 1.5em 0 0 0.25em;
+  display: inline-block;
+}
+
+.loggedAsavatar {
+  margin: 0.5rem 0.25rem;
+  display: inline-block;
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Link, withRouter } from "react-router-dom";
 import { Typography, Grow } from "@material-ui/core";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+import { IoIosMenu } from "react-icons/io";
 
 //Pages
 import MainScreen from "../screens/MainScreen/MainScreen";
@@ -78,16 +79,21 @@ class Main extends Component {
           style={{ transformOrigin: "0 0 0" }}
           {...(this.state.transition ? { timeout: 800 } : {})}
         >
-          <div className="avatar">
-            <ImageAvatars Src={ProfileImage} />
-            <Typography
-              gutterBottom
-              align="center"
-              color="inherit"
-              style={{ border: "2px solid white" }}
-            >
-              {profileName}
-            </Typography>
+          <div className="top">
+            <div className="loggedAs">
+              <div className="loggedAsuserName">
+                <Typography
+                  gutterBottom
+                  align="center"
+                  style={{ color: "#141e30", fontWeight: "bold" }}
+                >
+                  {profileName}
+                </Typography>{" "}
+              </div>
+              <div className="loggedAsavatar">
+                <ImageAvatars Src={ProfileImage} />
+              </div>
+            </div>
           </div>
         </Grow>
       );
