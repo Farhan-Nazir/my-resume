@@ -75,15 +75,14 @@ class Education extends Component {
 
                 {this.state.otherQualifications.map((e, i) => {
                   return (
-                    <Paper key={i} elevation={20}>
-                      <TimeLine
-                        Title={e.title}
-                        Organization={e.school}
-                        Description={e.description}
-                        startDate={e.startDate}
-                        endDate={e.endDate}
-                      />
-                    </Paper>
+                    <TimeLine
+                      key={i}
+                      Title={e.title}
+                      Organization={e.school}
+                      Description={e.description}
+                      startDate={e.startDate}
+                      endDate={e.endDate}
+                    />
                   );
                 })}
               </Paper>
