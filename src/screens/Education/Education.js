@@ -39,16 +39,15 @@ class Education extends Component {
                 {this.state.educations.map((e, i) => {
                   return (
                     <div>
-                      
-                        <TimeLine
-                        key={i} elevation={20}
-                          title={e.title}
-                          school={e.school}
-                          description={e.description}
-                          startDate={e.startDate}
-                          endDate={e.endDate}
-                        />
-                      
+                      <TimeLine
+                        key={i}
+                        elevation={20}
+                        Title={e.title}
+                        Organization={e.school}
+                        Description={e.description}
+                        startDate={e.startDate}
+                        endDate={e.endDate}
+                      />
                     </div>
                   );
                 })}
@@ -78,9 +77,9 @@ class Education extends Component {
                   return (
                     <Paper key={i} elevation={20}>
                       <TimeLine
-                        title={e.title}
-                        school={e.school}
-                        description={e.description}
+                        Title={e.title}
+                        Organization={e.school}
+                        Description={e.description}
                         startDate={e.startDate}
                         endDate={e.endDate}
                       />

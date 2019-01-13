@@ -3,6 +3,7 @@ import Grow from "@material-ui/core/Grow";
 import "./Experience.css";
 import Data from "../../static/data/data.json";
 import { Paper, Typography } from "@material-ui/core";
+import TimeLine from "../../components/TimeLine/TimeLine";
 
 class Experiences extends Component {
   constructor(props) {
@@ -37,29 +38,13 @@ class Experiences extends Component {
               </Typography>
               {this.state.experiences.map((e, i) => {
                 return (
-                  <Paper key={i} elevation={20} style={{ padding: 20 }}>
-                    <Typography
-                      align={"center"}
-                      variant={"h6"}
-                      component={"h5"}
-                    >
-                      {e.companyName}
-                    </Typography>
-                    <Typography
-                      align={"center"}
-                      variant={"h6"}
-                      component={"h5"}
-                    >
-                      {e.description}
-                    </Typography>
-                    <Typography
-                      align={"center"}
-                      variant={"h6"}
-                      component={"h5"}
-                    >
-                      {e.startDate} -- {e.endDate}
-                    </Typography>
-                  </Paper>
+                  <TimeLine
+                    key={i}
+                    Organization={e.companyName}
+                    Description={e.description}
+                    startDate={e.startDate}
+                    endDate={e.endDate}
+                  />
                 );
               })}
             </Paper>

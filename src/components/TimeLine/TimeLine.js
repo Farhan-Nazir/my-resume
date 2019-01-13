@@ -12,10 +12,10 @@ class TimeLine extends Component {
             <span />
             <div className="propsContainer">
               <Typography variant={"h6"} component={"h6"}>
-                {this.props.title}
+                {this.props.Title}
               </Typography>
-              <Typography>{this.props.school}</Typography>
-              <Typography>{this.props.description}</Typography>
+              <Typography>{this.props.Organization}</Typography>
+              <Typography>{this.props.Description}</Typography>
             </div>
             <span className="number">
               <span>{this.props.startDate}</span>
