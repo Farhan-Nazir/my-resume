@@ -38,9 +38,8 @@ class Education extends Component {
 
                 {this.state.educations.map((e, i) => {
                   return (
-                    <div>
+                    <div key={i}>
                       <TimeLine
-                        key={i}
                         elevation={20}
                         Title={e.title}
                         Organization={e.school}
