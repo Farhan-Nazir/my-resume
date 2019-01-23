@@ -18,15 +18,10 @@ class MyGithub extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "SamTabaja",
       data: {},
       value: ""
     };
   }
-
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
 
   render() {
     const { data } = this.state;
