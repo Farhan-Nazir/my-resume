@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Avatar from "@material-ui/core/Avatar";
@@ -7,20 +6,35 @@ import Typography from "@material-ui/core/Typography";
 //
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import Icon from "@material-ui/core/Icon";
 import RestoreIcon from "@material-ui/icons/Restore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 import Github from '../../components/Github/Github';
+import "./MyGithub.css";
+
+const API = `https://api.github.com/users/`;
 
 class MyGithub extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      username: "Farhan-Nazir",
       data: {},
       value: ""
     };
+  }
+
+  fetchData = username => {
+    fetch(API + username)
+      .then(res => res.json())
+      .then(data => {
+        return this.props.Username(data)
+      })
+      .catch(err => err);
+  };
+  componentDidMount() {
+    this.fetchData(this.state.username);
   }
 
   render() {
@@ -28,36 +42,26 @@ class MyGithub extends Component {
     
 
     return (
-      <div style={{ color: "black"}}>
+      <div className="github-main">
         {/* {console.log(this.state.data)} */}
         <Grid container direction="row" justify="center" alignItems="center">
           <Grid item xs={8}>
-            <Paper style={{ height: "500px", margin: "8em" }}>
-              <Github Username={e => this.setState({ data: e })} />
+            <Paper >
+              <Github Username={data => this.setState({ data })} />
 
               <Grid item>
-                <Grid container style={{ padding: 10 }}>
-                  <Grid key={0} style={{ padding: "0.2em" }} item>
-                    <Avatar
+                
+                <Avatar
                       alt="Farhan Nazir"
                       src={data.avatar_url}
                       justify="flex-start"
-                      style={{ margin: 30, width: 250, height: 250 }}
+                      style={{ margin: 10, width: 200, height: 200 }}
                     />
-                  </Grid>
-                  <Paper>
-                    <Grid key={1} style={{ width: 250, height: 310 }}>
-                      <Paper>Repositories</Paper>
-                      <br/>
-                      {`Public Repositories: ${data.public_repos}`}
-                    </Grid>
-                    
-                    
-                  </Paper>
-                  <Grid key={2}>
-                    <Paper>Test 1</Paper>
-                  </Grid>
-                </Grid>
+               
+                
+                  {`Public Repositories: ${data.public_repos}`}
+                 
+              
                 <Grid item key={3} sm={15}>
                   <Paper>
                     <Typography gutterBottom noWrap>
