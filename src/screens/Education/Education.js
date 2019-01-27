@@ -17,7 +17,9 @@ class Education extends Component {
 
   componentWillMount() {
     this.setState({ educations: [...Data.Education] });
-    this.setState({ otherQualifications: [...Data.OtherQualifications] });
+    this.setState({
+      otherQualifications: [...Data.OtherQualifications]
+    });
   }
 
   render() {
@@ -32,22 +34,25 @@ class Education extends Component {
           >
             <div className="edu eduLeft">
               <Paper>
-                <Typography gutterBottom variant={"h5"} component="h1">
+                <Typography
+                  gutterBottom
+                  variant={"h5"}
+                  component="h1"
+                >
                   Education
                 </Typography>
 
                 {this.state.educations.map((e, i) => {
                   return (
-                    <div key={i}>
-                      <TimeLine
-                        elevation={20}
-                        Title={e.title}
-                        Organization={e.school}
-                        Description={e.description}
-                        startDate={e.startDate}
-                        endDate={e.endDate}
-                      />
-                    </div>
+                    <TimeLine
+                      key={i}
+                      elevation={20}
+                      Title={e.title}
+                      Organization={e.school}
+                      Description={e.description}
+                      startDate={e.startDate}
+                      endDate={e.endDate}
+                    />
                   );
                 })}
               </Paper>
@@ -68,22 +73,28 @@ class Education extends Component {
           >
             <div className="edu eduRight">
               <Paper>
-                <Typography gutterBottom variant={"h5"} component="h1">
+                <Typography
+                  gutterBottom
+                  variant={"h5"}
+                  component="h1"
+                >
                   Other Qualifications
                 </Typography>
 
-                {this.state.otherQualifications.map((e, i) => {
-                  return (
-                    <TimeLine
-                      key={i}
-                      Title={e.title}
-                      Organization={e.school}
-                      Description={e.description}
-                      startDate={e.startDate}
-                      endDate={e.endDate}
-                    />
-                  );
-                })}
+                {this.state.otherQualifications.map(
+                  (e, i) => {
+                    return (
+                      <TimeLine
+                        key={i}
+                        Title={e.title}
+                        Organization={e.school}
+                        Description={e.description}
+                        startDate={e.startDate}
+                        endDate={e.endDate}
+                      />
+                    );
+                  }
+                )}
               </Paper>
             </div>
           </Grow>
