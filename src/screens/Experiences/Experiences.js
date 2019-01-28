@@ -40,6 +40,7 @@ class Experiences extends Component {
                 return (
                   <TimeLine
                     key={i}
+                    Title={e.title}
                     Organization={e.companyName}
                     Description={e.description}
                     startDate={e.startDate}

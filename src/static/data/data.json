@@ -96,13 +96,15 @@
       "startDate": "Mar-2005",
       "endDate": "May-2007",
       "companyName": "Manpower Ab",
-      "description": "IT-Consult at Sony, Skandiatransort"
+      "title": "IT-Consult",
+      "description": "As an IT consultant, i was responsible for bla bla bla"
     },
     {
       "startDate": "Mar-2005",
       "endDate": "Aug-2007",
       "companyName": "Å-R carton Ab",
-      "description": "Robotic Machine Technician"
+      "title": "Robotic Machine Technician",
+      "description": "As Robotic Machine Technician, i was responsible for bla bla bla"
     }
   ],
   "Projects": [
