@@ -43,7 +43,7 @@ class Education extends Component {
             <div
               className="edu eduLeft"
               style={{
-                margin: "0 2em",
+                margin: "5em 2em 0 2em",
                 width: "35%"
               }}
             >
@@ -55,7 +55,6 @@ class Education extends Component {
                   component={"h5"}
                   style={{
                     padding: "1em 0 0.5em 0",
-                    // color: "#243b55",
                     fontWeight: "700"
                   }}
                 >
@@ -87,7 +86,7 @@ class Education extends Component {
             <div
               className="edu eduRight"
               style={{
-                margin: "0 2em",
+                margin: "5em 2em 0 2em",
                 width: "35%"
               }}
             >

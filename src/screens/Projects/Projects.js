@@ -29,31 +29,40 @@ class Projects extends Component {
               <Typography
                 align={"center"}
                 gutterBottom
-                variant={"h4"}
+                variant={"display1"}
                 component={"h5"}
+                style={{
+                  padding: "1em 0 0.5em 0",
+                  fontWeight: "700"
+                }}
               >
                 Projects
               </Typography>
               {this.state.projects.map((e, i) => {
                 return (
-                  <Paper key={i} elevation={20} style={{ padding: 20 }}>
+                  <div key={i} style={{ margin: "2em 0" }}>
                     <Typography
-                      align={"center"}
-                      variant={"h6"}
+                      variant={"h5"}
                       component={"h5"}
+                      style={{ textAlign: "center" }}
                     >
                       {e.projectName}
                     </Typography>
                     <Typography
                       align={"center"}
-                      variant={"h6"}
-                      component={"h5"}
+                      variant={"subheading"}
+                      style={{
+                        padding: "0.5em 0 0.25em 0"
+                      }}
                     >
-                      <a className="projectLink" href={e.projectDemoUrl}>
+                      <a
+                        className="projectLink"
+                        href={e.projectDemoUrl}
+                      >
                         View Project
                       </a>
                     </Typography>
-                  </Paper>
+                  </div>
                 );
               })}
             </Paper>

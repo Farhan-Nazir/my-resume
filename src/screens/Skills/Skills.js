@@ -37,7 +37,7 @@ class Skills extends Component {
               </Typography>
               {this.state.skills.map((e, i) => {
                 return (
-                  <Paper key={i} elevation={20}>
+                  <div key={i} style={{ margin: "2em 0" }}>
                     <Typography
                       align={"center"}
                       variant={"h6"}
@@ -52,7 +52,7 @@ class Skills extends Component {
                     >
                       {e.skillLevel}
                     </Typography>
-                  </Paper>
+                  </div>
                 );
               })}
             </Paper>

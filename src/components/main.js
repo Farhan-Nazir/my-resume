@@ -45,33 +45,33 @@ class Main extends Component {
         name: "Main Screen",
         link: "/"
       },
+      // {
+      //   id: 2,
+      //   name: "My Resume",
+      //   link: "/resume"
+      // },
       {
         id: 2,
-        name: "My Resume",
-        link: "/resume"
-      },
-      {
-        id: 3,
         name: "Education",
         link: "/education"
       },
       {
-        id: 4,
+        id: 3,
         name: "Projects",
         link: "/projects"
       },
       {
-        id: 5,
+        id: 4,
         name: "Skills",
         link: "/skills"
       },
       {
-        id: 6,
+        id: 5,
         name: "My Github",
         link: "/myGithub"
       },
       {
-        id: 7,
+        id: 6,
         name: "Experiences",
         link: "/experiences"
       }
@@ -157,54 +157,58 @@ class Main extends Component {
     }
   };
 
-  handlePreviousNextButtons() {
+  handlePerviousButton() {
     const { navItems } = this.state;
     let pageIndex = navItems.findIndex(
       e => e.link === this.props.location.pathname
     );
-
     if (pageIndex >= 1 && pageIndex <= 5) {
       return (
-        <div className="nextPreviousButtons">
-          <div className="previousButton">
-            <Link to={navItems[pageIndex - 1].link}>
-              <FaArrowCircleLeft
-                style={{
-                  width: 30,
-                  height: 30,
-                  color: "white"
-                }}
-              />
-            </Link>
-          </div>
-          <div className="nextButton">
-            <Link to={navItems[pageIndex + 1].link}>
-              <FaArrowCircleRight
-                style={{
-                  width: 30,
-                  height: 30,
-                  color: "white"
-                }}
-              />
-            </Link>
-          </div>
+        <div
+          className="previousButton"
+          style={{
+            position: "absolute",
+            top: "70%"
+          }}
+        >
+          <Link to={navItems[pageIndex - 1].link}>
+            <FaArrowCircleLeft
+              style={{
+                width: 40,
+                height: 40,
+                color: "white"
+              }}
+            />
+          </Link>
         </div>
       );
     }
-    if (pageIndex === 6) {
+  }
+
+  handleNextButton() {
+    const { navItems } = this.state;
+    let pageIndex = navItems.findIndex(
+      e => e.link === this.props.location.pathname
+    );
+    if (pageIndex >= 1 && pageIndex <= 4) {
       return (
-        <div className="nextPreviousButtons">
-          <div className="previousButton">
-            <Link to={navItems[pageIndex - 1].link}>
-              <FaArrowCircleLeft
-                style={{
-                  width: 30,
-                  height: 30,
-                  color: "white"
-                }}
-              />
-            </Link>
-          </div>
+        <div
+          className="nextButton"
+          style={{
+            position: "absolute",
+            left: "95%",
+            top: "70%"
+          }}
+        >
+          <Link to={navItems[pageIndex + 1].link}>
+            <FaArrowCircleRight
+              style={{
+                width: 40,
+                height: 40,
+                color: "white"
+              }}
+            />
+          </Link>
         </div>
       );
     }
@@ -231,11 +235,11 @@ class Main extends Component {
           </div>
         </div>
 
-        {this.handlePreviousNextButtons()}
+        {this.handlePerviousButton()}
+        {this.handleNextButton()}
 
         <Switch>
           <Route exact path="/" component={MainScreen} />
-          <Route path="/resume" component={Resume} />
           <Route path="/projects" component={Projects} />
           <Route
             path="/experiences"
