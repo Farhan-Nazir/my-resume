@@ -1,7 +1,15 @@
 import React, { Component } from "react";
-import { Switch, Route, Link, withRouter } from "react-router-dom";
+import {
+  Switch,
+  Route,
+  Link,
+  withRouter
+} from "react-router-dom";
 import { Typography, Grow } from "@material-ui/core";
-import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+import {
+  FaArrowCircleRight,
+  FaArrowCircleLeft
+} from "react-icons/fa";
 import { IoIosMenu } from "react-icons/io";
 
 //Pages
@@ -77,7 +85,9 @@ class Main extends Component {
         <Grow
           in={this.state.transition}
           style={{ transformOrigin: "0 0 0" }}
-          {...(this.state.transition ? { timeout: 800 } : {})}
+          {...(this.state.transition
+            ? { timeout: 800 }
+            : {})}
         >
           <div className="top">
             <div className="loggedAs">
@@ -85,7 +95,10 @@ class Main extends Component {
                 <Typography
                   gutterBottom
                   align="center"
-                  style={{ color: "#141e30", fontWeight: "bold" }}
+                  style={{
+                    color: "#141e30",
+                    fontWeight: "bold"
+                  }}
                 >
                   {profileName}
                 </Typography>{" "}
@@ -102,10 +115,34 @@ class Main extends Component {
         <Grow
           in={this.state.transition}
           style={{ transformOrigin: "0 0 0" }}
-          {...(this.state.transition ? { timeout: 800 } : {})}
+          {...(this.state.transition
+            ? { timeout: 800 }
+            : {})}
         >
           <div>
-            <ImageAvatars Src={ProfileImage} AvatarClass={styles.bigAvatar} />
+            <div className="top">
+              <div className="loggedAs">
+                <div className="loggedAsuserName">
+                  <Typography
+                    gutterBottom
+                    align="center"
+                    style={{
+                      color: "#141e30",
+                      fontWeight: "bold"
+                    }}
+                  >
+                    {profileName}
+                  </Typography>{" "}
+                </div>
+                <div className="loggedAsavatar">
+                  <ImageAvatars Src={ProfileImage} />
+                </div>
+              </div>
+            </div>
+            <ImageAvatars
+              Src={ProfileImage}
+              AvatarClass={styles.bigAvatar}
+            />
             <Typography
               variant="h3"
               gutterBottom
@@ -131,12 +168,24 @@ class Main extends Component {
         <div className="nextPreviousButtons">
           <div className="previousButton">
             <Link to={navItems[pageIndex - 1].link}>
-              <FaArrowCircleLeft style={{ width: 30, height: 30 }} />
+              <FaArrowCircleLeft
+                style={{
+                  width: 30,
+                  height: 30,
+                  color: "white"
+                }}
+              />
             </Link>
           </div>
           <div className="nextButton">
             <Link to={navItems[pageIndex + 1].link}>
-              <FaArrowCircleRight style={{ width: 30, height: 30 }} />
+              <FaArrowCircleRight
+                style={{
+                  width: 30,
+                  height: 30,
+                  color: "white"
+                }}
+              />
             </Link>
           </div>
         </div>
@@ -147,7 +196,13 @@ class Main extends Component {
         <div className="nextPreviousButtons">
           <div className="previousButton">
             <Link to={navItems[pageIndex - 1].link}>
-              <FaArrowCircleLeft style={{ width: 30, height: 30 }} />
+              <FaArrowCircleLeft
+                style={{
+                  width: 30,
+                  height: 30,
+                  color: "white"
+                }}
+              />
             </Link>
           </div>
         </div>
@@ -156,24 +211,36 @@ class Main extends Component {
   }
 
   render() {
-    console.log(this.props.location);
+    // console.log(this.props.location);
     return (
       <div>
         <div>
           {this.handleAvatar()}
-          <div className="menu_btn">
-            <SideNavs NavItems={this.state.navItems} Component={Link} />
+          <div
+            className="menu_btn"
+            style={{
+              position: "absolute",
+              left: "5%",
+              top: " 12px"
+            }}
+          >
+            <SideNavs
+              NavItems={this.state.navItems}
+              Component={Link}
+            />
           </div>
         </div>
 
-        {/* <div className="previousButton">{this.handlePreviousButton()}</div> */}
         {this.handlePreviousNextButtons()}
 
         <Switch>
           <Route exact path="/" component={MainScreen} />
           <Route path="/resume" component={Resume} />
           <Route path="/projects" component={Projects} />
-          <Route path="/experiences" component={Experiences} />
+          <Route
+            path="/experiences"
+            component={Experiences}
+          />
           <Route path="/skills" component={Skills} />
           <Route path="/education" component={Education} />
           <Route path="/mygithub" component={MyGithub} />

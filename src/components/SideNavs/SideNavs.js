@@ -53,7 +53,12 @@ class SideNavs extends React.Component {
       <div>
         <IoIosMenu
           onClick={this.toggleDrawer("left", true)}
-          style={{ width: 40, height: 40, color: "white", cursor: "pointer" }}
+          style={{
+            width: 40,
+            height: 40,
+            color: "#243b55",
+            cursor: "pointer"
+          }}
         />
 
         <Drawer

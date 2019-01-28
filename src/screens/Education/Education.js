@@ -26,18 +26,38 @@ class Education extends Component {
     const { transition } = this.state;
     return (
       <div>
-        <div className="eduMain">
+        <div
+          className="eduMain"
+          style={{
+            textAlign: "center",
+            display: "flex",
+            msFlexDirection: "row",
+            justifyContent: "center"
+          }}
+        >
           <Grow
             in={transition}
             style={{ transformOrigin: "0 0 0" }}
             {...(transition ? { timeout: 800 } : {})}
           >
-            <div className="edu eduLeft">
+            <div
+              className="edu eduLeft"
+              style={{
+                margin: "0 2em",
+                width: "35%"
+              }}
+            >
               <Paper>
                 <Typography
+                  align={"center"}
                   gutterBottom
-                  variant={"h5"}
-                  component="h1"
+                  variant={"display1"}
+                  component={"h5"}
+                  style={{
+                    padding: "1em 0 0.5em 0",
+                    // color: "#243b55",
+                    fontWeight: "700"
+                  }}
                 >
                   Education
                 </Typography>
@@ -58,27 +78,32 @@ class Education extends Component {
               </Paper>
             </div>
           </Grow>
-          <Grow
-            in={transition}
-            style={{ transformOrigin: "0 0 0" }}
-            {...(transition ? { timeout: 1200 } : {})}
-          >
-            <div className="sexy_line" />
-          </Grow>
 
           <Grow
             in={transition}
             style={{ transformOrigin: "0 0 0" }}
             {...(transition ? { timeout: 1600 } : {})}
           >
-            <div className="edu eduRight">
+            <div
+              className="edu eduRight"
+              style={{
+                margin: "0 2em",
+                width: "35%"
+              }}
+            >
               <Paper>
                 <Typography
+                  align={"center"}
                   gutterBottom
-                  variant={"h5"}
-                  component="h1"
+                  variant={"display1"}
+                  component={"h5"}
+                  style={{
+                    padding: "1em 0 0.5em 0",
+                    // color: "#243b55",
+                    fontWeight: "700"
+                  }}
                 >
-                  Other Qualifications
+                  Qualifications
                 </Typography>
 
                 {this.state.otherQualifications.map(

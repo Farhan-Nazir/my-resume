@@ -21,25 +21,3 @@ h1 {
   text-align: center;
   margin-right: 10em;
 }
-
-.sexy_line {
-  grid-column: span(2);
-  height: 100%;
-  margin: 0.5em 5em;
-  color: black;
-  width: 2px;
-  background: white;
-}
-
-.timeLineTypgraphyWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.wrappedTimeLine {
-  border: 2px solid red;
-}
-
-.wrappedTypography {
-  border: 2px solid red;
-}

@@ -13,36 +13,48 @@
     }
   ],
   "NetworkIcons": [
-    { "IconName": "github", "URL": "https://github.com/Farhan-Nazir" },
+    {
+      "IconName": "github",
+      "URL": "https://github.com/Farhan-Nazir"
+    },
     {
       "IconName": "linkedIn",
       "URL": "https://www.linkedin.com/in/farhan-nazir-a26b12137/"
     },
-    { "IconName": "codePen", "URL": "https://github.com/Farhan-Nazir" },
-    { "IconName": "faceBook", "URL": "https://github.com/Farhan-Nazir" },
-    { "IconName": "instaGram", "URL": "https://github.com/Farhan-Nazir" }
+    {
+      "IconName": "codePen",
+      "URL": "https://github.com/Farhan-Nazir"
+    },
+    {
+      "IconName": "faceBook",
+      "URL": "https://github.com/Farhan-Nazir"
+    },
+    {
+      "IconName": "instaGram",
+      "URL": "https://github.com/Farhan-Nazir"
+    }
   ],
   "Education": [
     {
       "id": 1,
-      "startDate": "2014-01-03",
-      "endDate": "2016-03-01",
+      "startDate": "Jan-2014",
+      "endDate": "Mar-2016",
       "title": "Full-Stack Web Development",
       "school": "Hack Your Future",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "description": "Nodejs my name is seif and my friend is farhan hello man how are you"
     },
     {
       "id": 2,
-      "startDate": "2016-05-03",
-      "endDate": "2017-03-01",
+      "startDate": "May-2016",
+      "endDate": "Mar-2017",
       "title": "Master",
       "school": "Chalmers University of Technology",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     },
     {
       "id": 3,
-      "startDate": "2010-01-03",
-      "endDate": "2013-03-01",
+      "startDate": "Jan-2010",
+      "endDate": "Mar-2013",
       "title": "Bachelor in Javascript ",
       "school": "Lund University",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -51,24 +63,24 @@
   "OtherQualifications": [
     {
       "id": 1,
-      "startDate": "2010-01-03",
-      "endDate": "2013-03-01",
+      "startDate": "Jan-2010",
+      "endDate": "Mar-2013",
       "title": "Bachelor in Javascript ",
       "school": "Lund University",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     },
     {
       "id": 2,
-      "startDate": "2010-01-03",
-      "endDate": "2013-03-01",
+      "startDate": "Jan-2010",
+      "endDate": "Mar-2013",
       "title": "Bachelor in Reactjs ",
       "school": "Malmö University",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     },
     {
       "id": 3,
-      "startDate": "2010-01-03",
-      "endDate": "2013-03-01",
+      "startDate": "Jan-2010",
+      "endDate": "Mar-2013",
       "title": "Master in Javascript ",
       "school": "Kalmar University",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -81,14 +93,14 @@
   ],
   "Experiences": [
     {
-      "startDate": "2005-03-01",
-      "endDate": "2007-05-01",
+      "startDate": "Mar-2005",
+      "endDate": "May-2007",
       "companyName": "Manpower Ab",
       "description": "IT-Consult at Sony, Skandiatransort"
     },
     {
-      "startDate": "20010-03-01",
-      "endDate": "2007-08-01",
+      "startDate": "Mar-2005",
+      "endDate": "Aug-2007",
       "companyName": "Å-R carton Ab",
       "description": "Robotic Machine Technician"
     }
